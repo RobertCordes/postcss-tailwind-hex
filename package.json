@@ -1,5 +1,5 @@
 {
-  "name": "@diverently/postcss-tailwind-hex",
+  "name": "@robertcordes/postcss-tailwind-hex",
   "version": "1.0.0",
   "description": "PostCSS plugin that replaces Tailwind RGB(a) values with hexadecimal analogues",
   "keywords": [
