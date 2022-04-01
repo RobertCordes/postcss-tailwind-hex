@@ -9,7 +9,7 @@ this code
 
 ```
 .element {
-    border: 2px solid rgba(0,0,0,.2);
+    border: 2px solid rgba(0, 0, 0, var(--tw-text-opacity));
 }
 ```
 
