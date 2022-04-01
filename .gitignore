@@ -1,0 +1,12 @@
+# IDE
+.idea
+*.iml
+
+# Deps
+node_modules
+bower_components
+
+# Environment
+*.DS_Store
+*.log
+/log

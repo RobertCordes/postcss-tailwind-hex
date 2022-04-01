@@ -1,0 +1,36 @@
+{
+  "name": "@diverently/postcss-tailwind-hex",
+  "version": "1.0.0",
+  "description": "PostCSS plugin that replaces Tailwind RGB(a) values with hexadecimal analogues",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "color",
+    "rgb",
+    "rgba",
+    "hex",
+    "postprocessor",
+    "tailwind"
+  ],
+  "author": "Robert Cordes <robert@diverently.com> (https://github.com/RobertCordes)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Diverently/postcss-tailwind-hex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Diverently/postcss-tailwind-hex/issues"
+  },
+  "homepage": "https://github.com/Diverently/postcss-tailwind-hex",
+  "dependencies": {
+    "object-assign": "^4.1.0",
+    "rgb2hex": "^0.1.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  }
+}
