@@ -14,7 +14,7 @@ var assign = require('object-assign'); // fixme: remove after postcss node 0.12 
  * @type {*}
  */
 module.exports = (opts = {}) => {
-    var reg = /rgba\(\d+%?\s*,\s*\d+%?\s*,\s*\d+%?\s*(,\s*\d?.?\d+|,\s*var\(--tw-(?:.*)-opacity\))?\)/g;
+    var reg = /rgb\(\d+%?\s*\d+%?\s*\d+%?\s*(,\s*\d?.?\d+|\/\s*var\(--tw-(?:.*)-opacity\))?\)/g;
     var o = assign({}, opts);
 
     return {
@@ -38,7 +38,9 @@ module.exports = (opts = {}) => {
                 var newVal = val;
 
                 rgbValues.forEach(rgb => {
-                    var rgbString = rgb.replace(/,\s*var\(--tw-(.*)-opacity\)/, '');
+                    var rgbString = rgb.replace(/\s*\/\s*var\(--tw-(.*)-opacity\)/, '');
+                    // convert rgba(0 0 0) to rgb(0,0,0)
+                    rgbString = rgbString.replace(/\s/g, ',');
                     newVal = newVal.replace(rgb, rgbaToHex(rgbString));
 
                     if (!o.silent) {
